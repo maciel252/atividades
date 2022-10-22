@@ -4,44 +4,27 @@ import java.util.Scanner;
 
 public class questao05 {
     public static void main(String[] args) {
-        String[] nomes = new String[5];
-        int[] idades = new int[5];
-        int idadeMaisNova = 99;
-        String nomeDaPessoaMaisNova = "";
-        int idadeMaisVelha = 0;
-        String nomeDaPessoaMaisVelha = "";
-        
-        
-        Scanner scan = new Scanner(System.in);
-        // Entrada dos dados
-        
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Digite o nome: ");
-            nomes[i] = scan.next();
-            System.out.println("Digite a idade:");
-            idades[i] = scan.nextInt();
+        Scanner ler = new Scanner(System.in);
+        int pessoas = 0;
+        int pessoas1 =0;
+
+        for(int i =1;i <= 5;i=i+1){
+            System.out.print("Digite a idade: ");
+            int idade = ler.nextInt();
+            
+           
+            if(idade >= 18){
+            pessoas++;
+
+        }else{
+            pessoas1++;
+
         }
-        // Extraindo os idades e nomes do maior e menor idade
-        for (int i = 0; i < 5; i++) {
-            if  (idades[i] < idadeMaisNova) {
-                idadeMaisNova = idades[i];
-                nomeDaPessoaMaisNova = nomes[i];
-            }
-            if (idades[i] >  idadeMaisVelha) {
-                idadeMaisVelha = idades[i];
-                nomeDaPessoaMaisVelha = nomes[i];
-
-
-
-            }
-        }
-       /*  // Exibindo os resultados
-        System.out.println("Pessoa Mais nova Nome: " + nomeDaPessoaMaisNova);
-        System.out.println("Pessoa Mais nova Idade: " + idadeMaisNova);
-        System.out.println("Pessoa Mais velha Nome : " + nomeDaPessoaMaisVelha);
-        System.out.println("Pessoa Mais velha Idade: " + idadeMaisVelha);  */
-
         
+        }
+        System.out.println("Quantidade pessoas com idade maior ou igual a 18 anos são  " + pessoas +" e pessoas menores de 18 anos são: "+pessoas1);
+
+    ler.close();
     }
 }
 
