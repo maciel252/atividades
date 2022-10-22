@@ -17,7 +17,7 @@ public class Exercicio01 {
         } else {
             System.out.println("Número maior que 0 ");
 
-        }     
+        }    
     }
 } 
     

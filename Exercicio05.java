@@ -14,7 +14,7 @@ public class Exercicio05 {
         System.out.println("Digite sua idade");
         num = ler.nextInt();
 
-        if ((num == 16) || (num <= 17)) {
+        if ((num < 16) || (num <= 17)) {
             System.out.println("Pode votar, mas não pode dirigir ");            
         } else if (num >= 18){
             System.out.println("Pode votar e pode dirigir ");
